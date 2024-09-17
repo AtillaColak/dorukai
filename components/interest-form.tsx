@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import { Typography, Form, Input, Button, Row, Col, message } from 'antd'
-import { UserOutlined, MailOutlined, MessageOutlined } from '@ant-design/icons'
+import { UserOutlined, MailOutlined } from '@ant-design/icons'
 import { motion } from 'framer-motion'
 
 const { Title, Paragraph } = Typography
@@ -74,7 +74,6 @@ export const InterestForm: React.FC = () => {
                 </Form.Item>
                 <Form.Item name="message" label="Message" rules={[{ required: true, message: 'Please enter your message' }]}>
                   <Input.TextArea
-                    prefix={<MessageOutlined />}
                     placeholder="Tell us about your interests and goals"
                     rows={4}
                     style={{ resize: 'none', height: '120px' }}
