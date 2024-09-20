@@ -50,8 +50,10 @@ export const Header: React.FC<HeaderProps> = ({ isDarkMode, setIsDarkMode }) => 
 
   return (
     <AntHeader
-      className="flex items-center justify-between px-4 bg-transparent fixed w-full z-10 sm:bg-gray-300 sm:dark:bg-teal-950 lg:bg-transparent"
-      style={{ 
+        className={`flex items-center justify-between px-4 fixed w-full z-10 
+          ${isDarkMode ? 'bg-teal-950' : 'bg-gray-300'} 
+          lg:bg-transparent lg:dark:bg-transparent`}
+          style={{ 
         backdropFilter: 'blur(6px)', 
         height: '64px', 
       }}
