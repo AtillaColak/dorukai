@@ -18,7 +18,7 @@ export default function Footer({ isDarkMode }: FooterProps) {
       <div className="max-w-6xl mx-auto">
         <div className={`w-full h-px ${borderColor}`} />
         <div className="py-12">
-          <div className="flex flex-col md:flex-row justify-between items-center w-full md:col-span-3 space-y-8 md:space-y-0">
+          <div className="flex flex-col md:flex-row justify-between items-center w-full md:col-span-3 space-y-8 md:space-y-0 md:justify-around">
             <div className="flex flex-col items-center md:items-start">
               <Title level={2} className={textColor}>DORUKAI</Title>
             </div>
