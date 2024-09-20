@@ -49,7 +49,14 @@ export const Header: React.FC<HeaderProps> = ({ isDarkMode, setIsDarkMode }) => 
   )
 
   return (
-    <AntHeader className="flex items-center justify-between px-4 bg-transparent fixed w-full z-10" style={{ backdropFilter: 'blur(6px)', height: '64px', backfaceVisibility: "hidden" }}>
+    <AntHeader
+      className="flex items-center justify-between px-4 bg-transparent fixed w-full z-10"
+      style={{ 
+        backdropFilter: 'blur(6px)', 
+        height: '64px', 
+        backfaceVisibility: "hidden" 
+      }}
+    >
       <div className="flex items-center">
         <Logo color={isDarkMode ? '#ffffff' : '#1a472a'} />
       </div>
@@ -61,7 +68,10 @@ export const Header: React.FC<HeaderProps> = ({ isDarkMode, setIsDarkMode }) => 
           onVisibleChange={setIsMenuOpen}
           visible={isMenuOpen}
         >
-          <Button icon={<MenuOutlined />} onClick={() => setIsMenuOpen(!isMenuOpen)} />
+          <Button 
+            icon={<MenuOutlined />} 
+            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+          />
         </Dropdown>
         <Switch
           className="ml-4"
@@ -71,6 +81,8 @@ export const Header: React.FC<HeaderProps> = ({ isDarkMode, setIsDarkMode }) => 
           unCheckedChildren="☀️"
         />
       </div>
+      {/* Additional div for backdrop filter */}
+      <div style={{ height: '1px', bottom: '-1px', position: 'absolute', width: '100%' }}></div>
     </AntHeader>
   )
 }
